@@ -15,11 +15,11 @@ class Solution:
         if closed < open:
             self.backtracking(result, open, closed + 1, n, current + ")")
 
-if __name__ == "__main__":
-    solution = Solution()
-    n = 3
-    combinations = solution.generateParenthesis(n)
 
-    print(f"All combinations of well-formed parentheses for n = {n} are:")
-    for combination in combinations:
-        print(combination)
+solution = Solution()
+n = 3
+combinations = solution.generateParenthesis(n)
+
+print(f"All combinations of well-formed parentheses for n = {n} are:")
+for combination in combinations:
+    print(combination)
