@@ -6,9 +6,9 @@ class TreeNode:
 
 class Solution: 
     def averageOfSubtree(self, root):
-        solution = 0
+        solution = [0]
         self.calculateSumAndCount(root, solution)
-        return solution
+        return solution[0]
 
     def calculateSumAndCount(self, root, solution):
         if root is None:
@@ -21,7 +21,7 @@ class Solution:
         nodeCount = 1 + leftSubtree[1] + rightSubtree[1]
 
         if root.val == sum/nodeCount:
-            solution += 1
+            solution[0] += 1
 
         return (sum, nodeCount)
 
