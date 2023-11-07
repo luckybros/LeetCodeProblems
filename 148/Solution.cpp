@@ -9,7 +9,7 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
  
-class Solution {
+class VectorSolution {
 public:
     ListNode* sortList(ListNode* head) {
         vector<int> nums;
