@@ -10,13 +10,12 @@ public class Solution {
     
         int target = 5;
     
-        Solution solution = new Solution();
-        boolean result = solution.searchMatrix(matrix, target);
+        boolean result = searchMatrix(matrix, target);
     
         System.out.println("Result: " + result);
     }
-    
-    public boolean searchMatrix(int[][] matrix, int target) {
+
+    public static boolean searchMatrix(int[][] matrix, int target) {
         int rows = matrix.length;
         int colons = matrix[0].length;
 
