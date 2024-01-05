@@ -17,13 +17,16 @@ class Solution {
             return;
         }
 
+        if(sum > target)
+            return;
+
         for(int i = step; i < candidates.length; i++) {
             vector.add(candidates[i]);
-            if(sum + candidates[i] <= target) 
-                Backtracking(candidates, target, result, vector, sum + candidates[i], i);
+            Backtracking(candidates, target, result, vector, sum + candidates[i], i);
             vector.remove(vector.size() - 1);
         }
     }
+}
 
     public static void main(String[] arg) {
         int arr[] = new int[] {2, 3, 5};
