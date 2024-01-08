@@ -52,4 +52,5 @@ class Solution {
             cache[i][j] = 1 + Math.min(DP(word1, word2, i+1, j+1, cache), Math.min(DP(word1, word2, i, j+1, cache), DP(word1, word2, i+1, j, cache)));
             return cache[i][j];
         }
+    }
 }
