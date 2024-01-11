@@ -1,4 +1,4 @@
-package HammingDistance.Solution;
+package ProveInterorso.PrimaIntercorsoSecondoTurno.HammingDistance.Solution;
 
 import java.util.ArrayList;
 import java.util.Arrays;
