@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public int climbStairs(int n) {
         int[] memo = new int[n+1];
@@ -21,6 +23,24 @@ class Solution {
         }
 
         return one;
+    }
+
+    public int climbStairsTopDown(int n) {
+        int[] cache = new int[n+1];
+        Arrays.fill(cache, -1);
+        return DP(n, cache);
+    }
+
+    public int DP(int n, int[] cache) {
+        if(n < 0) return 0;
+
+        if(cache[n] != -1) return cache[n];
+
+        if(n == 0 || n == 1) return 1;
+
+        cache[n] = DP(n-1, cache) + DP(n-2, cache);
+
+        return cache[n];
     }
 
     public static void main(String[] arg) {
