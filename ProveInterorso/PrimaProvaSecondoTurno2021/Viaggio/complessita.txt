@@ -1,0 +1,1 @@
+temporale O(n) poiché si itera su un vettore, O(1) spaziale poiché si usano delle variabili aggiuntive
