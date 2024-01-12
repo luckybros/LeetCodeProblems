@@ -1,4 +1,4 @@
-package ProveInterorso.PrimaProvaSecondoTurno2021;
+package ProveInterorso.PrimaProvaSecondoTurno2021.JollySequence;
 
 import java.util.Arrays;
 import java.util.Scanner;
