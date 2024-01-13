@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Prodotti {
     private static Scanner scanner = new Scanner(System.in);
+    
     public int solution(List<List<Integer>> products, int budget) {
         int cache[][] = new int[products.size()+1][budget+1];
         for(int i = 0; i < cache.length; i++)
