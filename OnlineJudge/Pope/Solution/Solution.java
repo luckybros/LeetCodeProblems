@@ -9,7 +9,7 @@ public class Solution {
     }
 
     public List<Integer> divide(int nums[], int period, int left, int right) {
-        if (right - left + 1 < period) {
+        if (nums[right] - nums[left] < period) {
             List<Integer> result = new ArrayList<>();
             result.add(0);
             result.add(0);
@@ -45,17 +45,17 @@ public class Solution {
 
         List<Integer> result = new ArrayList<>();
         result.add(j - i - 1);
-        result.add(nums[i+1]);
-        result.add(nums[j-1]);
+        result.add(nums[i + 1]);
+        result.add(nums[j - 1]);
         return result;
     }
 
     public static void main(String[] args) {
         Solution soluzione = new Solution();
         // Input con valori forniti
-        int Y = 5;
+        int Y = 6;
         int P = 20;
-        int[] popeYears = {1, 2, 3, 6, 8, 12, 13, 13, 15, 16, 17, 18, 19, 20, 20, 21, 25, 26, 30, 31};
+        int[] popeYears = {850 ,860, 865, 870, 875, 880};
 
         // Chiamata alla funzione principale
         List<Integer> result = soluzione.Pope(popeYears, Y);
