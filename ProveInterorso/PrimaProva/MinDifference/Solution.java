@@ -55,13 +55,13 @@ public class Solution {
             if(firstCrossDifference <= secondCrossDifference) {
                 middleVector[i] = leftVector[i];
                 middleVector[i-1] = rightVector[i-1];
-                middleMin = firstCrossDifference;
+                middleMin = Math.min(middleMin, firstCrossDifference);
             }
 
             else {
                 middleVector[i] = leftVector[i];
                 middleVector[i-1] = rightVector[i-1];
-                middleMin = secondCrossDifference;
+                middleMin = Math.min(middleMin, secondCrossDifference);
             }
         }
 
