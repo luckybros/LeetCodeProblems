@@ -10,11 +10,11 @@ public class Solution {
     }
 
     private static List<Integer> divide(int[] popeYears, int period, int left, int right) {
-        if (popeYears[right] - popeYears[left] < period) {
+        if (right == left) {
             List<Integer> result = new ArrayList<>();
-            result.add(0);
-            result.add(0);
-            result.add(0);
+            result.add(1);
+            result.add(popeYears[left]);
+            result.add(popeYears[left]);
             return result;
         }
 
@@ -59,9 +59,17 @@ public class Solution {
 
     public static void main(String[] args) {
         // Esempio di utilizzo
-        int Y = 6;
+        /*int Y = 6;
         int P = 20;
         int[] popeYears = {850, 860, 865, 870, 875};
+
+        List<Integer> result = findLargestNumberOfPopes(popeYears, Y);
+
+        System.out.println(result.get(0) + " " + result.get(1) + " " + result.get(2));*/
+
+        int Y = 5;
+        int P = 20;
+        int[] popeYears = {1, 2, 3, 6, 8, 12, 13, 13, 15, 16, 17, 18, 19, 20, 20, 21, 25, 26, 30, 31};
 
         List<Integer> result = findLargestNumberOfPopes(popeYears, Y);
 
