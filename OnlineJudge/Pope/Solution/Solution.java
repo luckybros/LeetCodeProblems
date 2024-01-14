@@ -10,7 +10,7 @@ public class Solution {
     }
 
     private static List<Integer> divide(int[] popeYears, int period, int left, int right) {
-        if (popeYears[right] - popeYears[left] + 1 <= period) {
+        if (popeYears[right] - popeYears[left] < period) {
             List<Integer> result = new ArrayList<>();
             result.add(0);
             result.add(0);
