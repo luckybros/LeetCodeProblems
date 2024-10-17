@@ -16,7 +16,7 @@ class Solution {
         charFromDigits.put("7", "pqrs");
         charFromDigits.put("8", "tuv");
         charFromDigits.put("9", "wxyz");
-        List<String> result = new ArrayList<String>();
+        List<String> result = new ArrayList<>();
         String resultString = "";
         Backtracking(charFromDigits, digits, digits.length(), result, resultString, 0);
         return result;

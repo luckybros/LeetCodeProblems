@@ -3,8 +3,8 @@ import java.util.List;
 
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
-        List<Integer> vector = new ArrayList<Integer>();
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> vector = new ArrayList<>();
         int sum = 0;
         Backtracking(candidates, target, result, vector, sum, 0);
         return result;
@@ -12,7 +12,7 @@ class Solution {
 
     public void Backtracking(int[] candidates, int target, List<List<Integer>> result, List<Integer> vector, int sum, int step) {
         if(sum == target) {
-            List<Integer> vectorCopy = new ArrayList<Integer>(vector);
+            List<Integer> vectorCopy = new ArrayList<>(vector);
             result.add(vectorCopy);
             return;
         }
