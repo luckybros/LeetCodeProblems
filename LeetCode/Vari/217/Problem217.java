@@ -1,4 +1,3 @@
-package LeetCodeProblems;
 import java.util.Arrays;
 
 class Solution {
