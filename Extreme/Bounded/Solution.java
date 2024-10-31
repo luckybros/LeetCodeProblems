@@ -1,6 +1,7 @@
 // Don't place your source in a package
-import java.lang.*;
 import java.util.*;
+import java.lang.*;
+import java.io.*;
 
 // Please name your class Main
 class Main {
@@ -82,14 +83,12 @@ class Main {
 	        return;
 	    }
 	    
-	    for(int i = step; i < numVariables; i++) {
-	        int lowerBound = map.get(step + 1).get(0);
-	        int highBound = map.get(step + 1).get(1);
-	        for(int j = lowerBound; j <= highBound; j++) {
-                variables.add(j);
-                Backtracking(result, step + 1, numVariables, variables, map, constraints);
-                variables.remove(variables.size() - 1);
-	        }
+	    int lowerBound = map.get(step + 1).get(0);
+        int highBound = map.get(step + 1).get(1);
+        for (int j = lowerBound; j <= highBound; j++) {
+            variables.add(j);
+            Backtracking(result, step + 1, numVariables, variables, map, constraints);
+            variables.remove(variables.size() - 1);
         }
 	    
 	}

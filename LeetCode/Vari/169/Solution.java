@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class Solution {
     public int majorityElement(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -20,4 +22,4 @@ class Solution {
         }
         return max;
     }
-}
+} 
